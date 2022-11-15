@@ -1,0 +1,14 @@
+provider "aws" {
+region = "ap-south-1"
+access_key = "AKIA5TZNVF3G5CH5THVQ"
+secret_key = "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"
+}
+
+resource "aws_vpc" "demo" {
+cidr_block = "66.66.0.0/16"
+instane_tenancy = "default"
+
+tags = {
+	 name = "demo_vpc"
+       }
+}
